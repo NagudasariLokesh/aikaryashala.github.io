@@ -216,23 +216,42 @@ body {
 }
 
 /* ID Card */
+/* ID Card Container */
 .id-card {
-  min-width: 180px;
-  height: 110px;
+  min-width: 220px;
+  height: 300px;
+
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.15),
     rgba(255,255,255,0.05)
   );
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
+
+  border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.25);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+  padding: 14px;
+  overflow: hidden;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* IMAGE INSIDE CARD */
+.id-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;   /* 🔑 KEY FIX */
+  object-position: center;
+
+  border-radius: 12px;
+  background: #0b1020;
+}
+
 
 .id-card:hover {
   transform: scale(1.15) translateY(-8px);
@@ -240,6 +259,9 @@ body {
     0 15px 35px rgba(0,255,255,0.25),
     0 0 25px rgba(59,130,246,0.6);
   z-index: 10;
+}
+.id-card:hover img {
+  transform: scale(1.05);
 }
 
 /* Hover scroll zones */
