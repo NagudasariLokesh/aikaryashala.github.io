@@ -54,10 +54,27 @@ h1 i{font-style:italic;font-weight:400;color:var(--rust);}
   margin:22px 0 0;color:var(--ink-soft);max-width:60ch;font-size:17.5px;
 }
 
+/* ---------- jump link ---------- */
+.jump{margin:24px 0 0;}
+.jumplink{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rust);text-decoration:none;
+  border:1px solid var(--rust);border-radius:999px;
+  padding:9px 16px;
+  transition:background .16s ease, color .16s ease;
+}
+.jumplink:hover{background:var(--rust);color:var(--paper);}
+.jumplink:focus-visible{outline:2px solid var(--rust);outline-offset:3px;}
+.jumplink::after{content:" ↓";}
+
 /* ---------- section label ---------- */
 .sectionlabel{
   display:flex;align-items:baseline;gap:14px;margin-bottom:22px;
+  scroll-margin-top:24px;
 }
+.sectionlabel + .cards{margin-bottom:52px;}
 .sectionlabel h2{
   font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0;
 }
@@ -138,11 +155,43 @@ footer{
   </div>
   <!-- EDIT: one-line description of the bootcamp -->
   <p class="lede">What to cover in each session</p>
+  <p class="jump"><a class="jumplink" href="#results">Jump to Results</a></p>
 </header>
 
-<div class="sectionlabel">
-  <h2>Sequence of Topics to cover</h2>
-  <span>N Topcis</span>
+
+<div class="sectionlabel" id="preparation">
+  <h2>Preparation</h2>
+  <span>3 Topic</span>
+  <div class="line"></div>
+</div>
+
+<div class="cards">
+
+  <a class="card" href="https://aikaryashala.com/system_setup/" target="_blank" rel="noopener">
+    <div class="num">01</div>
+    <h3>System Setup</h3>
+    <p>Step-by-step instructions for setting up your development environment.</p>
+    <div class="go">Open</div>
+  </a>
+
+  <a class="card" href="https://aikaryashala.com/system_setup/book" target="_blank" rel="noopener">
+    <div class="num">02</div>
+    <h3>BOOK: Reading material</h3>
+    <p>To understand the fundamentals better.</p>
+    <div class="go">Open</div>
+  </a>
+
+  <a class="card" href="submission_status.html" target="_blank" rel="noopener">
+    <div class="num">03</div>
+    <h3>System Setup Status</h3>
+    <p>Check the status of your installation</p>
+    <div class="go">Open</div>
+  </a>
+</div>
+
+<div class="sectionlabel" id="activities">
+  <h2>Activities</h2>
+  <span>10 Topics</span>
   <div class="line"></div>
 </div>
 
@@ -162,14 +211,14 @@ footer{
   <a class="card" href="https://www.figma.com/proto/VRgWntdUUcOCMnhnjuYXlG/Fundamentals-of-Computing?node-id=102%3A3&scaling=scale-down-width&hide-ui=1" target="_blank" rel="noopener">
     <div class="num">01</div>
     <h3>System Internals</h3>
-    <p>Morning Session: Topic#1: First cover this</p>
+    <p>...</p>
     <div class="go">Open</div>
   </a>
 
   <a class="card" href="compilation_pipeline.html" target="_blank" rel="noopener">
     <div class="num">02</div>
     <h3>C Compilation Process and execution of program</h3>
-    <p>Afternoon Session: Topic#2: All internal steps of compilation process and running of program</p>
+    <p>All internal steps of compilation process and running of program</p>
     <div class="go">Open</div>
   </a>
 
@@ -182,29 +231,8 @@ footer{
 
   <a class="card" href="c_debugging_mentor.html" target="_blank" rel="noopener">
     <div class="num">04</div>
-    <h3>Post Dinner Session: Topic#3: AI PROMPT</h3>
+    <h3>AI PROMPT for Debugging Mentor</h3>
     <p>Prompt to identify issues in C code files </p>
-    <div class="go">Open</div>
-  </a>
-
-  <a class="card" href="submission_status.html" target="_blank" rel="noopener">
-    <div class="num">05</div>
-    <h3>Submission Status</h3>
-    <p>Check the status of your installation</p>
-    <div class="go">Open</div>
-  </a>
-
-  <a class="card" href="https://aikaryashala.com/system_setup/book" target="_blank" rel="noopener">
-    <div class="num">06</div>
-    <h3>REF: BOOK: Reading material</h3>
-    <p>To understand the fundamentals better.</p>
-    <div class="go">Open</div>
-  </a>
-
-  <a class="card" href="https://aikaryashala.com/system_setup/" target="_blank" rel="noopener">
-    <div class="num">07</div>
-    <h3>REF: System Setup</h3>
-    <p>Step-by-step instructions for setting up your development environment.</p>
     <div class="go">Open</div>
   </a>
 
@@ -215,43 +243,53 @@ footer{
     <div class="go">Open</div>
   </a>
 
-  <a class="card" href="https://kiet-bootcamp-site.vercel.app" target="_blank" rel="noopener">
-    <div class="num">09</div>
-    <h3>Pull Request Status</h3>
-    <p>Check if your Pull Request is successful and your details are visible in this website</p>
-    <div class="go">Open</div>
-  </a>
-
   <a class="card" href="https://github.com/aikaryashala/kiet-2048" target="_blank" rel="noopener">
-    <div class="num">10</div>
+    <div class="num">09</div>
     <h3>KIET-2048 Game</h3>
     <p>Play the KIET-2048 game to practice your programming skills.</p>
     <div class="go">Open</div>
   </a>
 
   <a class="card" href="https://github.com/rohinibarla/bei" target="_blank" rel="noopener">
-    <div class="num">11</div>
+    <div class="num">10</div>
     <h3>Backend Internals: Upload your suno.com songs</h3>
     <p>A tiny song-upload app whose only purpose is to show what a backend actually does.</p>
     <div class="go">Open</div>
   </a>
 
+</div>
+
+<div class="sectionlabel" id="results">
+  <h2>Results</h2>
+  <span>04 Links</span>
+  <div class="line"></div>
+</div>
+
+<div class="cards">
+
+  <a class="card" href="https://kiet-bootcamp-site.vercel.app" target="_blank" rel="noopener">
+    <div class="num">01</div>
+    <h3>Pull Request Status</h3>
+    <p>Check if your Pull Request is successful and your details are visible in this website</p>
+    <div class="go">Open</div>
+  </a>
+
   <a class="card" href="results_grade_a.html" target="_blank" rel="noopener">
-    <div class="num">12</div>
+    <div class="num">02</div>
     <h3>Results: Grade A group of students</h3>
     <p>View the results of the Grade A group of students.</p>
     <div class="go">Open</div>
   </a>
 
   <a class="card" href="results_grade_b.html" target="_blank" rel="noopener">
-    <div class="num">12</div>
+    <div class="num">03</div>
     <h3>Results: Grade B group of students</h3>
     <p>View the results of the Grade B group of students.</p>
     <div class="go">Open</div>
   </a>
 
   <a class="card" href="results_participants.html" target="_blank" rel="noopener">
-    <div class="num">12</div>
+    <div class="num">04</div>
     <h3>Results: Participants</h3>
     <p>View the results of all participants.</p>
     <div class="go">Open</div>
