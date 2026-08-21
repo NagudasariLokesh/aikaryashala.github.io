@@ -24,6 +24,14 @@
     body.js .reveal.is-visible, body.js .reveal-item.is-visible { opacity:1; transform:translateY(0); }
     @media(prefers-reduced-motion:reduce){ .reveal,.reveal-item{ transition:none;transform:none;opacity:1; } }
 
+    /* ── Top Banner ── */
+    .top-banner {
+      background:#10b981;
+      color:#fff; text-align:center; padding:10px 16px;
+      font-size:14px; font-weight:600; letter-spacing:.02em;
+    }
+    .top-banner strong { font-weight:800; }
+
     /* ── Header ── */
     .header { position:sticky; top:16px; z-index:1000; display:flex; justify-content:center; }
     .nav-shell {
@@ -366,6 +374,7 @@
       .hero-copy h1 { font-size:clamp(32px,8vw,48px); }
       .hero-subtitle { font-size:16px; }
       .new-batch-badge { font-size:11px; padding:6px 16px; }
+      .top-banner { font-size:12px; padding:8px 12px; }
       .hero-actions { margin:24px 0 0; }
       .hero-btn { padding:12px 24px; font-size:15px; }
 
@@ -432,6 +441,11 @@
   </style>
 </head>
 <body class="home">
+
+<!-- Top Banner -->
+<div class="top-banner">
+  New batch final joining date: <strong>Aug 24th, 2026</strong>
+</div>
 
 <!-- Header -->
 <header class="header">
